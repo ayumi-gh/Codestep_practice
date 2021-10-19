@@ -1,0 +1,288 @@
+@charset "UTF-8";
+/*********************************
+	A MODERN CSS RESET
+*********************************/
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role=list],
+ol[role=list] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations and transitions for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+
+  *,
+*::before,
+*::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+/*********************************
+	VARIABLES SET
+*********************************/
+/*------ FONT -------*/
+/*------ COLOR -------*/
+/*------ LAYOUT -------*/
+/*********************************
+	FUNCTION SET
+*********************************/
+/*********************************
+	MIXIN SET
+*********************************/
+/*********************************
+	BASE SET
+*********************************/
+html {
+  font-size: 62.5%;
+  font-family: "メイリオ";
+}
+
+body {
+  font-size: 1.6rem;
+}
+
+a {
+  color: inherit;
+  display: block;
+  text-decoration: none;
+}
+
+img {
+  height: auto;
+}
+
+ul, ol {
+  margin: 0;
+  padding: 0;
+}
+
+/*------ wrapper -------*/
+.wrapper {
+  margin: auto;
+  width: min(92%, 960px);
+}
+
+/*------ button -------*/
+.btn {
+  display: block;
+}
+.btn > a {
+  display: block;
+}
+.btn:hover {
+  opacity: 0.8;
+}
+
+/*------ h2-------*/
+h2 {
+  border-bottom: 1px solid #383E45;
+  display: inline-block;
+  font-size: 3.2rem;
+  line-height: 4.8rem;
+  margin-bottom: 60px;
+}
+
+/*********************************
+	MAIN SET
+*********************************/
+/*--------------------------------
+	HEADER SET
+--------------------------------*/
+.header {
+  background: #fff;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.header-inner {
+  align-items: center;
+  display: grid;
+  grid-template-columns: auto auto;
+  justify-content: space-between;
+  padding: 10px;
+}
+
+.header-nav-list {
+  display: flex;
+  gap: 2rem;
+}
+.header-nav-list li {
+  font-size: 1.44rem;
+}
+
+/*--------------------------------
+	HERO SET
+--------------------------------*/
+.hero {
+  background: url(/img/mainvisual.jpg) no-repeat center;
+  background-size: cover;
+  height: 600px;
+  margin-bottom: clamp(8rem, 10.417vw, 14.2rem);
+}
+
+/*--------------------------------
+	ABOUT SET
+--------------------------------*/
+.about {
+  text-align: center;
+  margin-bottom: clamp(10rem, 13.021vw, 17.8rem);
+}
+
+.about-item {
+  display: grid;
+  grid-template-columns: repeat(1, auto);
+  grid-template-rows: repeat(3, auto);
+  gap: 10px;
+  justify-content: center;
+}
+.about-item img {
+  clip-path: circle(50%);
+  justify-self: center;
+}
+.about-item > p {
+  text-align: left;
+}
+.about-item > p:nth-of-type(1) {
+  font-weight: bold;
+}
+.about-item > p:nth-of-type(2) {
+  font-size: 1.44rem;
+}
+
+/*--------------------------------
+	BICYCLE SET
+--------------------------------*/
+.bicycle {
+  text-align: center;
+  margin-bottom: clamp(10rem, 13.021vw, 17.8rem);
+}
+
+.bicycle-items {
+  display: grid;
+  grid-template-columns: repeat(1, auto);
+  gap: 30px;
+  margin-bottom: clamp(10rem, 13.021vw, 17.8rem);
+  place-items: center;
+}
+.bicycle-items li > *:not(:last-child) {
+  margin-bottom: 10px;
+}
+.bicycle-items li p:nth-of-type(1) {
+  font-weight: bold;
+}
+.bicycle-items li p:nth-of-type(2) {
+  font-size: 1.44rem;
+}
+
+/*--------------------------------
+	FOOTER SET
+--------------------------------*/
+.footer {
+  font-size: 1rem;
+  text-align: center;
+}
+
+.copyright {
+  display: block;
+  padding: 10px;
+}
+
+/*********************************
+	RESPONSIVE SET
+*********************************/
+/*--------------------------------
+	MIN 768px
+--------------------------------*/
+@media screen and (min-width: 768px) {
+  /*---------- ABOUT SET ----------*/
+  .about-item {
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    grid-template-rows: auto auto;
+    gap: 10px 30px;
+    grid-auto-flow: row;
+    grid-template-areas: "box1 box2" "box1 box3";
+    margin: auto;
+    width: 700px;
+  }
+  .about-item img {
+    grid-area: box1;
+  }
+  .about-item p:nth-of-type(1) {
+    grid-area: box2;
+  }
+  .about-item p:nth-of-type(2) {
+    grid-area: box3;
+  }
+}
+/*--------------------------------
+	MIN 960px
+--------------------------------*/
+@media screen and (min-width: 960px) {
+  /*---------- BICYCLE SET ----------*/
+  .bicycle-items {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

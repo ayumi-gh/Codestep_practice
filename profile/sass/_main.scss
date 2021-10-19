@@ -1,0 +1,131 @@
+/*********************************
+	MAIN SET
+*********************************/
+@use "global/variables" as v;
+@use "function" as f;
+@use "mixin" as m;
+
+
+/*--------------------------------
+	HEADER SET
+--------------------------------*/
+
+.header {
+	background: #fff;
+	position: sticky;
+	top: 0;
+	z-index: 10;
+}
+
+.header-inner {
+	align-items: center;
+	display: grid;
+	grid-template-columns: auto auto;
+	justify-content: space-between;
+	padding: 10px;
+}
+
+.header-nav-list {
+	display: flex;
+	gap: 2rem;
+
+	li {
+		font-size: 1.44rem;
+	}
+
+}
+
+/*--------------------------------
+	HERO SET
+--------------------------------*/
+
+.hero {
+	background: url(/img/mainvisual.jpg) no-repeat center;
+	background-size: cover;
+	height: 600px;
+	margin-bottom: f.clamp_vw(80);
+}
+
+/*--------------------------------
+	ABOUT SET
+--------------------------------*/
+
+.about {
+	text-align: center;
+	margin-bottom: f.clamp_vw(100);
+}
+
+.about-item {
+	display: grid;
+    grid-template-columns: repeat(1, auto);
+    grid-template-rows: repeat(3, auto);
+	gap: 10px;
+	justify-content: center;
+
+	img {
+		clip-path: circle(50%);
+		justify-self: center;
+	}
+
+	> p {
+		text-align: left;
+
+		&:nth-of-type(1) {
+			font-weight: bold;
+		}
+	
+		&:nth-of-type(2) {
+			font-size: 1.44rem;
+		}
+	}
+
+}
+
+/*--------------------------------
+	BICYCLE SET
+--------------------------------*/
+
+.bicycle {
+	text-align: center;
+	margin-bottom: f.clamp_vw(100);
+}
+
+.bicycle-items {
+	display: grid;
+    grid-template-columns: repeat(1, auto);
+	gap: 30px;
+	margin-bottom: f.clamp_vw(100);
+	place-items: center;
+
+	li {
+		>* {
+			&:not(:last-child) {
+				margin-bottom: 10px;
+			}
+		}
+
+		p {
+			&:nth-of-type(1) {
+				font-weight: bold;
+			}
+
+			&:nth-of-type(2) {
+				font-size: 1.44rem;
+			}
+		}
+	}
+}
+
+/*--------------------------------
+	FOOTER SET
+--------------------------------*/
+.footer{
+	font-size: 1rem;
+	text-align: center;
+}
+
+.copyright{
+	display: block;
+	padding: 10px;
+}
+
