@@ -199,14 +199,13 @@ h2 {
   clip-path: circle(50%);
   justify-self: center;
 }
-.about-item > p {
+.about-item h3 {
+  font-weight: bold;
   text-align: left;
 }
-.about-item > p:nth-of-type(1) {
-  font-weight: bold;
-}
-.about-item > p:nth-of-type(2) {
+.about-item p {
   font-size: 1.44rem;
+  text-align: left;
 }
 
 /*--------------------------------
@@ -227,10 +226,10 @@ h2 {
 .bicycle-items li > *:not(:last-child) {
   margin-bottom: 10px;
 }
-.bicycle-items li p:nth-of-type(1) {
+.bicycle-items li h3 {
   font-weight: bold;
 }
-.bicycle-items li p:nth-of-type(2) {
+.bicycle-items li p {
   font-size: 1.44rem;
 }
 
