@@ -1,0 +1,58 @@
+/*********************************
+	RESPONSIVE SET
+*********************************/
+@use "global/variables" as v;
+@use "function" as f;
+@use "mixin" as m;
+
+/*--------------------------------
+	MIN 600px
+--------------------------------*/
+@media screen and (min-width: 600px) {
+
+	/*---------- HEADER SET ----------*/
+	.header {
+		grid-template-columns: repeat(2, auto);
+		justify-content: space-between;
+	}
+
+	/*---------- WORKS SET ----------*/
+	.works-gallery {
+		grid-template-columns: repeat(3, 1fr);
+	}
+
+	/*---------- NEWS SET ----------*/
+	.news-list {
+		li {
+			flex-direction: row;
+
+			time {
+				flex-basis: 25%;
+			}
+
+			p {
+				flex-basis: 75%;
+			}
+		}
+	}
+
+	/*---------- CONTACT SET ----------*/
+	.contact {
+
+		form {
+			.contact-block {
+				flex-direction: row;
+
+				> :nth-child(1) {
+					flex-basis: 15%;
+				}
+
+				> :nth-child(2) {
+					flex-basis: 75%;
+				}
+			}
+		}
+
+	}
+
+}

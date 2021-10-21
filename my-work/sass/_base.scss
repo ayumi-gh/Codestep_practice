@@ -1,0 +1,67 @@
+/*********************************
+	BASE SET
+*********************************/
+@use "global/variables" as v;
+@use "function" as f;
+@use "mixin" as m;
+
+html {
+	font-size: 62.5%;
+}
+
+body {
+	font-size: 1.6rem;
+}
+
+a {
+	color: inherit;
+	display: block;
+	text-decoration: none;
+}
+
+img {
+	height: auto;
+}
+
+ul,ol {
+	margin: 0;
+	padding: 0;
+}
+
+input[type="submit"] {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    padding: 0;
+    border: none;
+    outline: none;
+    background: transparent;
+}
+
+/*------ wrapper -------*/
+.wrapper {
+	margin: auto;
+	width: min(92%, 960px);
+}
+
+/*------ h2 -------*/
+h2 {
+	font-size: 2.4rem;
+	margin-bottom: 40px;
+}
+
+/*------ button -------*/
+
+.btn {
+	display: block;
+
+	> a {
+		display: block;
+	}
+
+	&:hover {
+		opacity: 0.8;
+	}
+
+}
+

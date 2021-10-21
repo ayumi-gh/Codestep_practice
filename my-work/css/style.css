@@ -1,0 +1,340 @@
+/*********************************
+	A MODERN CSS RESET
+*********************************/
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role=list],
+ol[role=list] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations and transitions for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+
+  *,
+*::before,
+*::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+/*********************************
+	VARIABLES SET
+*********************************/
+/*------ FONT -------*/
+/*------ COLOR -------*/
+/*------ LAYOUT -------*/
+/*********************************
+	FUNCTION SET
+*********************************/
+/*********************************
+	MIXIN SET
+*********************************/
+/*********************************
+	BASE SET
+*********************************/
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.6rem;
+}
+
+a {
+  color: inherit;
+  display: block;
+  text-decoration: none;
+}
+
+img {
+  height: auto;
+}
+
+ul, ol {
+  margin: 0;
+  padding: 0;
+}
+
+input[type=submit] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  padding: 0;
+  border: none;
+  outline: none;
+  background: transparent;
+}
+
+/*------ wrapper -------*/
+.wrapper {
+  margin: auto;
+  width: min(92%, 960px);
+}
+
+/*------ h2 -------*/
+h2 {
+  font-size: 2.4rem;
+  margin-bottom: 40px;
+}
+
+/*------ button -------*/
+.btn {
+  display: block;
+}
+.btn > a {
+  display: block;
+}
+.btn:hover {
+  opacity: 0.8;
+}
+
+/*********************************
+	MAIN SET
+*********************************/
+/*--------------------------------
+	HEADER SET
+--------------------------------*/
+.header {
+  display: grid;
+  place-items: center;
+  gap: 10px;
+  margin: 20px auto 15px;
+}
+
+.header-nav-list {
+  align-items: center;
+  display: flex;
+  gap: 20px;
+  font-size: 1.28rem;
+}
+
+.fa-instagram {
+  font-weight: bold;
+}
+
+/*--------------------------------
+	HERO SET
+--------------------------------*/
+.hero {
+  margin-bottom: 80px;
+}
+.hero img {
+  height: 420px;
+  object-fit: cover;
+  width: 100%;
+}
+
+/*--------------------------------
+	ABOUT SET
+--------------------------------*/
+.about {
+  font-size: 1.44rem;
+  margin-bottom: 70px;
+}
+.about h2 {
+  text-align: center;
+}
+
+.about-content {
+  display: grid;
+  gap: 30px;
+}
+
+/*--------------------------------
+	WORKS SET
+--------------------------------*/
+.works {
+  margin-bottom: 70px;
+}
+.works h2 {
+  text-align: center;
+}
+
+.works-gallery {
+  display: grid;
+  gap: 23px;
+  place-items: center;
+}
+
+/*--------------------------------
+	NEWS SET
+--------------------------------*/
+.news {
+  font-size: 1.44rem;
+  margin-bottom: 70px;
+}
+.news h2 {
+  text-align: center;
+}
+
+.news-list li {
+  border-top: 1px solid #C8C8C8;
+  display: flex;
+  flex-direction: column;
+  padding: 15px;
+}
+.news-list li:last-of-type {
+  border-bottom: 1px solid #C8C8C8;
+}
+.news-list li > * {
+  line-height: 2.1rem;
+}
+
+/*--------------------------------
+	CONTACT SET
+--------------------------------*/
+.contact {
+  font-size: 1.44rem;
+  margin-bottom: 70px;
+}
+.contact h2 {
+  text-align: center;
+}
+.contact form {
+  display: flex;
+  font-size: 1.44rem;
+  flex-direction: column;
+  gap: 10px;
+}
+.contact form .contact-block {
+  display: flex;
+  flex-direction: column;
+}
+.contact form .contact-block:last-of-type {
+  margin-bottom: 20px;
+}
+.contact form input {
+  min-height: 1.4rem;
+  width: 100%;
+}
+.contact form textarea {
+  min-height: 16rem;
+  width: 100%;
+}
+.contact form .submit.btn {
+  background: #24292E;
+  border: 2px solid #24292E;
+  color: #fff;
+  margin: auto;
+  padding: 1rem 0;
+  width: 200px;
+}
+.contact form .submit.btn:hover {
+  background: #fff;
+  color: #24292E;
+}
+
+/*--------------------------------
+	FOOTER SET
+--------------------------------*/
+.copyright {
+  background: #24292E;
+  text-align: center;
+}
+.copyright small {
+  color: #fff;
+  display: block;
+  font-size: 1rem;
+  padding: 5px 0;
+}
+
+/*********************************
+	RESPONSIVE SET
+*********************************/
+/*--------------------------------
+	MIN 600px
+--------------------------------*/
+@media screen and (min-width: 600px) {
+  /*---------- HEADER SET ----------*/
+  .header {
+    grid-template-columns: repeat(2, auto);
+    justify-content: space-between;
+  }
+
+  /*---------- WORKS SET ----------*/
+  .works-gallery {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  /*---------- NEWS SET ----------*/
+  .news-list li {
+    flex-direction: row;
+  }
+  .news-list li time {
+    flex-basis: 25%;
+  }
+  .news-list li p {
+    flex-basis: 75%;
+  }
+
+  /*---------- CONTACT SET ----------*/
+  .contact form .contact-block {
+    flex-direction: row;
+  }
+  .contact form .contact-block > :nth-child(1) {
+    flex-basis: 15%;
+  }
+  .contact form .contact-block > :nth-child(2) {
+    flex-basis: 75%;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

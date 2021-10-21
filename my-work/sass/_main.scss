@@ -1,0 +1,182 @@
+/*********************************
+	MAIN SET
+*********************************/
+@use "global/variables" as v;
+@use "function" as f;
+@use "mixin" as m;
+
+/*--------------------------------
+	HEADER SET
+--------------------------------*/
+
+.header {
+	display: grid;
+	place-items: center;
+	gap: 10px;
+	margin: 20px auto 15px;
+}
+
+.header-nav-list {
+	align-items: center;
+	display: flex;
+	gap: 20px;
+	font-size: 1.28rem;
+}
+
+.fa-instagram {
+	font-weight: bold;
+}
+
+/*--------------------------------
+	HERO SET
+--------------------------------*/
+
+.hero {
+	margin-bottom: 80px;
+
+	img {
+		height: 420px;
+		object-fit: cover;
+		width: 100%;
+	}
+}
+
+/*--------------------------------
+	ABOUT SET
+--------------------------------*/
+
+.about {
+	font-size: 1.44rem;
+	margin-bottom: 70px;
+
+	h2 {
+		text-align: center;
+	}
+
+}
+
+.about-content {
+	display: grid;
+	gap: 30px;
+}
+
+/*--------------------------------
+	WORKS SET
+--------------------------------*/
+
+.works {
+	margin-bottom: 70px;
+
+	h2 {
+		text-align: center;
+	}
+
+}
+
+.works-gallery {
+	display: grid;
+	gap: 23px;
+	place-items: center;
+}
+
+/*--------------------------------
+	NEWS SET
+--------------------------------*/
+
+.news {
+	font-size: 1.44rem;
+	margin-bottom: 70px;
+
+	h2 {
+		text-align: center;
+	}
+
+}
+
+.news-list {
+	li {
+		border-top: 1px solid #C8C8C8;
+		display: flex;
+		flex-direction: column;
+		padding: 15px;
+
+		&:last-of-type {
+			border-bottom: 1px solid #C8C8C8;
+		}
+
+		>* {
+			line-height: 2.1rem;
+		}
+	}
+}
+
+/*--------------------------------
+	CONTACT SET
+--------------------------------*/
+
+.contact {
+	font-size: 1.44rem;
+	margin-bottom: 70px;
+
+	h2 {
+		text-align: center;
+	}
+
+	form {
+		display: flex;
+		font-size: 1.44rem;
+		flex-direction: column;
+		gap: 10px;
+
+		.contact-block {
+			display: flex;
+			flex-direction: column;
+
+			&:last-of-type {
+				margin-bottom: 20px;
+			}
+		}
+
+		input {
+			min-height: 1.4rem;
+			width: 100%;
+		}
+
+		textarea {
+			min-height: 16rem;
+			width: 100%;
+		}
+
+		.submit.btn {
+			background: #24292E;
+			border: 2px solid #24292E;
+			color: #fff;
+			margin: auto;
+			padding: 1rem 0;
+			width: 200px;
+
+			&:hover {
+				background: #fff;
+				color: #24292E;
+			}
+		}
+
+	}
+
+}
+
+/*--------------------------------
+	FOOTER SET
+--------------------------------*/
+
+.copyright {
+	background: #24292E;
+	text-align: center;
+
+	small {
+		color: #fff;
+		display: block;
+		font-size: 1rem;
+		padding: 5px 0;
+	}
+}
