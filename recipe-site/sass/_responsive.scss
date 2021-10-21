@@ -1,0 +1,19 @@
+/*********************************
+	RESPONSIVE SET
+*********************************/
+@use "global/variables" as v;
+@use "function" as f;
+@use "mixin" as m;
+
+/*--------------------------------
+	MIN 834px
+--------------------------------*/
+@media screen and (min-width: 834px) {
+
+	/*---------- RECIPE SET ----------*/
+	.recipe-list {
+		grid-template-columns: repeat(3, 1fr);
+	}
+
+
+}

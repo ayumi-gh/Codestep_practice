@@ -1,0 +1,88 @@
+/*********************************
+	MAIN SET
+*********************************/
+@use "global/variables" as v;
+@use "function" as f;
+@use "mixin" as m;
+
+/*--------------------------------
+	HERO SET
+--------------------------------*/
+
+.hero {
+	margin-bottom: 80px;
+
+	img {
+		height: 100vh;
+		object-fit: cover;
+		object-position: center top;
+		width: 100%;
+	}
+
+}
+
+/*--------------------------------
+	RECIPE SET
+--------------------------------*/
+
+.recipe {
+	text-align: center;
+
+	h2 {
+		font-size: 3.3rem;
+		margin-bottom: 20px;
+	}
+
+	p {
+		margin-bottom: 80px;
+		padding: 0 4%;
+	}
+}
+
+.recipe-list {
+	display: grid;
+	margin-bottom: 60px;
+	place-items: center;
+
+	li {
+		img {
+			height: 500px;
+			object-fit: cover;
+			width: 100vh;
+		}
+	}
+	
+}
+
+.recipe-more {
+	outline: 1px solid v.$text-main-color;
+	font-size: 1.4rem;
+	margin: 0 auto 80px;
+	padding: 18px 60px;
+	width: 232px;
+}
+
+/*--------------------------------
+	FOOTER SET
+--------------------------------*/
+
+.footer {
+	text-align: center;
+}
+
+.footer-sns { 
+	display: flex;
+	gap: 20px;
+	justify-content: center;
+	margin-bottom: 20px;
+
+	li {
+		font-size: 1.2rem;
+		border-bottom: 1px solid v.$text-main-color;
+	}
+
+}
+
+.copyright {
+	margin-bottom: 20px;
+}

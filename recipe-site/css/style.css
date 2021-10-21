@@ -1,0 +1,220 @@
+/*********************************
+	A MODERN CSS RESET
+*********************************/
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role=list],
+ol[role=list] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations and transitions for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+
+  *,
+*::before,
+*::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+/*********************************
+	VARIABLES SET
+*********************************/
+/*------ FONT -------*/
+/*------ COLOR -------*/
+/*------ LAYOUT -------*/
+/*********************************
+	FUNCTION SET
+*********************************/
+/*********************************
+	MIXIN SET
+*********************************/
+/*********************************
+	BASE SET
+*********************************/
+html {
+  font-size: 62.5%;
+}
+
+body {
+  color: #2B2A27;
+  font-size: 1.6rem;
+  font-family: "Helvetica Neue", "Arial", "Hiragino Sans", "Meiryo", sans-serif;
+}
+
+a {
+  color: inherit;
+  display: block;
+  text-decoration: none;
+}
+
+img {
+  height: auto;
+}
+
+ul, ol {
+  margin: 0;
+  padding: 0;
+}
+
+/*------ wrapper -------*/
+.wrapper {
+  margin: auto;
+  width: min(92%, 1166px);
+}
+
+/*------ button -------*/
+.btn {
+  display: block;
+}
+.btn > a {
+  display: block;
+}
+.btn:hover {
+  opacity: 0.8;
+}
+
+/*********************************
+	MAIN SET
+*********************************/
+/*--------------------------------
+	HERO SET
+--------------------------------*/
+.hero {
+  margin-bottom: 80px;
+}
+.hero img {
+  height: 100vh;
+  object-fit: cover;
+  object-position: center top;
+  width: 100%;
+}
+
+/*--------------------------------
+	RECIPE SET
+--------------------------------*/
+.recipe {
+  text-align: center;
+}
+.recipe h2 {
+  font-size: 3.3rem;
+  margin-bottom: 20px;
+}
+.recipe p {
+  margin-bottom: 80px;
+  padding: 0 4%;
+}
+
+.recipe-list {
+  display: grid;
+  margin-bottom: 60px;
+  place-items: center;
+}
+.recipe-list li img {
+  height: 500px;
+  object-fit: cover;
+  width: 100vh;
+}
+
+.recipe-more {
+  outline: 1px solid #2B2A27;
+  font-size: 1.4rem;
+  margin: 0 auto 80px;
+  padding: 18px 60px;
+  width: 232px;
+}
+
+/*--------------------------------
+	FOOTER SET
+--------------------------------*/
+.footer {
+  text-align: center;
+}
+
+.footer-sns {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+.footer-sns li {
+  font-size: 1.2rem;
+  border-bottom: 1px solid #2B2A27;
+}
+
+.copyright {
+  margin-bottom: 20px;
+}
+
+/*********************************
+	RESPONSIVE SET
+*********************************/
+/*--------------------------------
+	MIN 834px
+--------------------------------*/
+@media screen and (min-width: 834px) {
+  /*---------- RECIPE SET ----------*/
+  .recipe-list {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
