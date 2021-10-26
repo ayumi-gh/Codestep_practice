@@ -1,0 +1,177 @@
+/*********************************
+	MAIN SET
+*********************************/
+@use "global/variables" as v;
+@use "function" as f;
+@use "mixin" as m;
+
+/*--------------------------------
+	HEADER SET
+--------------------------------*/
+
+.header {
+	padding: 36px 0 16px;
+}
+
+.header-logo {
+	margin-bottom: 2.6rem;
+	text-align: center;
+
+	a {
+		img {
+			margin: 0 auto;
+		}
+	}
+}
+
+.header-nav {
+	display: flex;
+	font-size: 1.2rem;
+	gap: 1.4rem;
+	justify-content: space-between;
+	overflow-x: auto;
+	white-space: nowrap;
+}
+
+.header-nav-main {
+	display: flex;
+	gap: 1.4rem;
+}
+
+.header-nav-sub {
+	display: flex;
+	gap: 1.4rem;
+}
+
+/*--------------------------------
+	ITEM SET
+--------------------------------*/
+
+.item {
+	img {
+		height: 468px;
+		margin-bottom: 10px;
+		object-fit: cover;
+		object-position: center;
+		width: 100%;
+	}
+}
+
+.item-how-name {
+	border-top: 1px solid #C3C3C3;
+	border-bottom: 1px solid #C3C3C3;
+	font-style: 1.6rem;
+	font-weight: bold;
+	margin-bottom: 2rem;
+	padding: 1.8rem 0;
+}
+
+.item-how-detail {
+	font-size:  1.2rem;
+	line-height: 2.2rem;
+	margin-bottom: 3rem;
+}
+
+.item-how-price {
+	font-size: 1.2rem;
+	line-height: 2.1rem;
+	margin-bottom: 3rem;
+}
+
+.item-how-select {
+	border-collapse: collapse;
+	font-size: 1.2rem;
+	margin-bottom: 20px;
+	text-align: center;
+	width: 100%;
+
+	thead {
+		border-bottom: 1px solid #c3c3c3;
+	}
+
+	tbody {
+		&:not(:last-of-type) {
+			border-bottom: 1px solid #c3c3c3;
+		}
+	}
+
+	tr {
+		>* {
+			&:not(:last-of-type) {
+				border-right: 1px solid #c3c3c3;
+			}
+		}
+
+		.color {
+			width: 20%;
+		}
+
+		.size {
+			width: 20%;
+		}
+
+	}
+
+	th, td {
+		padding: 1rem 0;
+	}
+
+	select {
+		appearance: none; /* デフォルトのスタイルを無効 */
+		-webkit-appearance: none;
+
+		&::-ms-expand {
+			display: none; /* デフォルトのスタイルを無効(IE用) */
+		}
+
+		background-image: url(/img/icon-arrow-01.png);
+		background-position: right 5px center;
+    	background-repeat: no-repeat;
+    	background-size: 15px 15px;
+		cursor: pointer;
+		padding-left: 1rem;
+		width: 90%;
+	}
+
+}
+
+.btn {
+	margin: 3rem 0;
+
+	&.normal {
+		background: #4B4B4B;
+		color: #fff;
+		padding: 1.8rem 0;
+		width: 100%;
+	}
+}
+
+.item-how-size {
+	border-collapse: collapse;
+	font-size: 1.2rem;
+	margin-bottom: 90px;
+	text-align: center;
+	width: 100%;
+
+	* {
+		border: 1px solid #c3c3c3;
+		padding: 1rem 0;
+	}
+
+	tr {
+		th {
+			background: #ECEBEB;
+			width: 10%;
+		}
+	}
+}
+
+/*--------------------------------
+	FOOTER SET
+--------------------------------*/
+
+.copyright {
+	font-size: 1rem;
+	padding: 1rem 0;
+	text-align: center;
+}

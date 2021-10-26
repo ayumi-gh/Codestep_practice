@@ -1,0 +1,63 @@
+/*********************************
+	RESPONSIVE SET
+*********************************/
+@use "global/variables" as v;
+@use "function" as f;
+@use "mixin" as m;
+
+/*--------------------------------
+	MIN 900px
+--------------------------------*/
+@media screen and (min-width: 900px) {
+
+	/*---------- HEADER SET ----------*/
+
+	.header {
+		align-items: center;
+		display: grid;
+		grid-template-columns: 160px auto 200px;
+		padding: 0;
+	}
+
+	.header-btn {
+		background: #000;
+		color: #fff;
+		display: block;
+		padding: 16px 0;
+	}
+
+	/*---------- NEWS SET ----------*/
+
+	.news-list {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+
+		li {
+			&:not(:last-of-type) {
+				border-right: 1px solid #000;
+			}
+		}
+	}
+
+	/*---------- ABOUT SET ----------*/
+
+	.about {
+		display: grid;
+		grid-template-columns: repeat(2, auto);
+		gap: 70px;
+		margin-bottom: 120px;
+	}
+
+	.about-img {
+		// width: f.clamp_vw(760);
+		width: 54.3vw;
+	}
+
+	.about-inner {
+		margin-top: 150px;
+	}
+
+	/*---------- BUSINESS SET ----------*/
+
+
+}

@@ -1,0 +1,83 @@
+/*********************************
+	BASE SET
+*********************************/
+@use "global/variables" as v;
+@use "function" as f;
+@use "mixin" as m;
+
+html {
+	font-size: 62.5%;
+}
+
+body {
+	background: #F0F0F0;
+	font-size: 1.6rem;
+}
+
+a {
+	color: inherit;
+	display: block;
+	text-decoration: none;
+}
+
+img {
+	height: auto;
+}
+
+ul,ol {
+	margin: 0;
+	padding: 0;
+}
+
+button{
+	background-color: transparent;
+	border: none;
+	cursor: pointer;
+	outline: none;
+	padding: 0;
+	appearance: none;
+}
+
+/*------ wrapper -------*/
+.wrapper {
+	margin: auto;
+	width: min(92%, 1000px);
+}
+
+/*------ button -------*/
+
+.btn {
+	display: block;
+
+	> a {
+		display: block;
+	}
+
+	&:hover {
+		opacity: 0.8;
+	}
+
+}
+
+/*------ hX -------*/
+
+h2 {
+	font-size: 3.6rem;
+	letter-spacing: .2em;
+
+	+ p {
+		font-size: 1.4rem;
+		position: relative;
+		margin-bottom: 70px;
+
+		&::after {
+			content: "";
+			bottom: -15px;
+			left: 0;
+			height: 2px;
+			background: black;
+			width: 50px;
+			position: absolute;
+		}
+	}
+}

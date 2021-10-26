@@ -1,0 +1,199 @@
+/*********************************
+	MAIN SET
+*********************************/
+@use "global/variables" as v;
+@use "function" as f;
+@use "mixin" as m;
+
+/*--------------------------------
+	HEADER SET
+--------------------------------*/
+
+.header {
+	padding: 16px 0;
+}
+
+.header-logo {
+	margin-bottom: 0.75rem;
+}
+
+.header-nav {
+	ul {
+		display: flex;
+		font-size: 1.4rem;
+		gap: min(5.5vw, 3rem);
+	}
+}
+
+.header-btn {
+	display: none;
+}
+
+/*--------------------------------
+	HERO SET
+--------------------------------*/
+
+.hero {
+	img {
+		height: 600px;
+		margin-bottom: 80px;
+		object-fit: cover;
+		object-position: center;
+		width: 100%;
+	}
+}
+
+/*--------------------------------
+	NEWS SET
+--------------------------------*/
+
+.news {
+	margin-bottom: 90px;
+}
+
+.news-list {
+	display: grid;
+	font-size: 1.4rem;
+	gap: 40px;
+
+	time {
+		display: inline-block;
+		margin-bottom: 1.6rem;
+
+		&.label {
+			position: relative;
+
+			&::after {
+				background: #000;
+				color: #fff;
+    			font-size: 1.2rem;
+				position: absolute;
+				top: .1rem;
+				right: -60px;
+				text-align: center;
+				width: 50px;
+			}
+			
+			&.news::after {
+				content: "NEWS";
+			}
+
+			&.press::after {
+				content: "PRESS";
+			}
+
+		}
+	}
+
+}
+
+/*--------------------------------
+	ABOUT SET
+--------------------------------*/
+
+.about {
+	margin-bottom: 30px;
+}
+
+.about-img {
+	margin-bottom: 30px;
+
+	img {
+		object-position: center;
+		object-fit: cover;
+		height: 300px;
+		width: 100%;
+	}
+}
+
+/*--------------------------------
+	BUSINESS SET
+--------------------------------*/
+
+.business {
+	margin-bottom: 80px;
+}
+
+.business-list {
+	display: flex;
+	flex-direction: column;
+	gap: 30px;
+}
+
+.business-list-01,
+.business-list-02 {
+	display: flex;
+	flex-direction: column;
+	gap: 30px;
+
+	>* {
+		margin: 0 auto;
+	}
+
+	.name {
+		padding-left: 2rem;
+		margin-bottom: 1rem;
+		position: relative;
+
+		&::before {
+			background: #000;
+			content: "";
+			width: 1rem;
+			height: 1px;
+			left: 0;
+			position: absolute;
+			top: 1rem;
+		}
+	}
+}
+
+/*--------------------------------
+	COMPANY SET
+--------------------------------*/
+
+.company-inner {
+	background: #fff;
+	font-size: 1.4rem;
+	margin-bottom: 20px;
+	padding: 40px 20px;
+}
+
+.company-info {
+	dd {
+		margin-bottom: 5px;
+		padding-left: 1em;
+	}
+
+	dt {
+		margin-top: 8px;
+	}
+
+}
+
+.company-img {
+	img {
+		object-position: center;
+		object-fit: cover;
+		height: 400px;
+		width: 100%;
+	}
+}
+
+/*--------------------------------
+	FOOTER SET
+--------------------------------*/
+
+.footer {
+	background: #fff;
+	font-size: 1.4rem;
+	line-height: 2.1rem;
+	padding: 40px 16px 20px;
+}
+
+.footer-logo {
+	margin-bottom: 10px;
+}
+
+.footer-info {
+	margin-bottom: 40px;
+}

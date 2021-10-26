@@ -1,0 +1,326 @@
+@charset "UTF-8";
+/*********************************
+	A MODERN CSS RESET
+*********************************/
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role=list],
+ol[role=list] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations and transitions for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+
+  *,
+*::before,
+*::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+/*********************************
+	VARIABLES SET
+*********************************/
+/*------ FONT -------*/
+/*------ COLOR -------*/
+/*------ LAYOUT -------*/
+/*********************************
+	FUNCTION SET
+*********************************/
+/*********************************
+	MIXIN SET
+*********************************/
+/*********************************
+	BASE SET
+*********************************/
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.6rem;
+  font-family: "Raleway", sans-serif;
+}
+
+a {
+  color: inherit;
+  display: block;
+  text-decoration: none;
+}
+
+img {
+  height: auto;
+}
+
+ul, ol {
+  margin: 0;
+  padding: 0;
+}
+
+button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  padding: 0;
+  appearance: none;
+}
+
+table {
+  border-collapse: collapse;
+  border: none;
+  border-spacing: 0;
+}
+
+th, td {
+  vertical-align: top;
+  font-weight: normal;
+}
+
+/*------ wrapper -------*/
+.wrapper {
+  margin: auto;
+  width: min(92%, 800px);
+}
+
+/*------ button -------*/
+.btn {
+  display: block;
+}
+.btn > a {
+  display: block;
+}
+.btn:hover {
+  opacity: 0.8;
+}
+
+/*********************************
+	MAIN SET
+*********************************/
+/*--------------------------------
+	HEADER SET
+--------------------------------*/
+.header {
+  padding: 36px 0 16px;
+}
+
+.header-logo {
+  margin-bottom: 2.6rem;
+  text-align: center;
+}
+.header-logo a img {
+  margin: 0 auto;
+}
+
+.header-nav {
+  display: flex;
+  font-size: 1.2rem;
+  gap: 1.4rem;
+  justify-content: space-between;
+  overflow-x: auto;
+  white-space: nowrap;
+}
+
+.header-nav-main {
+  display: flex;
+  gap: 1.4rem;
+}
+
+.header-nav-sub {
+  display: flex;
+  gap: 1.4rem;
+}
+
+/*--------------------------------
+	ITEM SET
+--------------------------------*/
+.item img {
+  height: 468px;
+  margin-bottom: 10px;
+  object-fit: cover;
+  object-position: center;
+  width: 100%;
+}
+
+.item-how-name {
+  border-top: 1px solid #C3C3C3;
+  border-bottom: 1px solid #C3C3C3;
+  font-style: 1.6rem;
+  font-weight: bold;
+  margin-bottom: 2rem;
+  padding: 1.8rem 0;
+}
+
+.item-how-detail {
+  font-size: 1.2rem;
+  line-height: 2.2rem;
+  margin-bottom: 3rem;
+}
+
+.item-how-price {
+  font-size: 1.2rem;
+  line-height: 2.1rem;
+  margin-bottom: 3rem;
+}
+
+.item-how-select {
+  border-collapse: collapse;
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+  text-align: center;
+  width: 100%;
+}
+.item-how-select thead {
+  border-bottom: 1px solid #c3c3c3;
+}
+.item-how-select tbody:not(:last-of-type) {
+  border-bottom: 1px solid #c3c3c3;
+}
+.item-how-select tr > *:not(:last-of-type) {
+  border-right: 1px solid #c3c3c3;
+}
+.item-how-select tr .color {
+  width: 20%;
+}
+.item-how-select tr .size {
+  width: 20%;
+}
+.item-how-select th, .item-how-select td {
+  padding: 1rem 0;
+}
+.item-how-select select {
+  appearance: none;
+  /* デフォルトのスタイルを無効 */
+  -webkit-appearance: none;
+  background-image: url(/img/icon-arrow-01.png);
+  background-position: right 5px center;
+  background-repeat: no-repeat;
+  background-size: 15px 15px;
+  cursor: pointer;
+  padding-left: 1rem;
+  width: 90%;
+}
+.item-how-select select::-ms-expand {
+  display: none;
+  /* デフォルトのスタイルを無効(IE用) */
+}
+
+.btn {
+  margin: 3rem 0;
+}
+.btn.normal {
+  background: #4B4B4B;
+  color: #fff;
+  padding: 1.8rem 0;
+  width: 100%;
+}
+
+.item-how-size {
+  border-collapse: collapse;
+  font-size: 1.2rem;
+  margin-bottom: 90px;
+  text-align: center;
+  width: 100%;
+}
+.item-how-size * {
+  border: 1px solid #c3c3c3;
+  padding: 1rem 0;
+}
+.item-how-size tr th {
+  background: #ECEBEB;
+  width: 10%;
+}
+
+/*--------------------------------
+	FOOTER SET
+--------------------------------*/
+.copyright {
+  font-size: 1rem;
+  padding: 1rem 0;
+  text-align: center;
+}
+
+/*********************************
+	RESPONSIVE SET
+*********************************/
+/*--------------------------------
+	MIN 897px
+--------------------------------*/
+@media screen and (min-width: 897px) {
+  /*---------- HEADER SET ----------*/
+  .header {
+    border-bottom: 1px solid #c3c3c3;
+    padding: 36px 0 26px;
+  }
+
+  /*---------- ITEM SET ----------*/
+  .item {
+    display: flex;
+    gap: 60px;
+    margin: 34px auto;
+    width: min(92%, 800px);
+  }
+  .item img {
+    width: 50%;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
