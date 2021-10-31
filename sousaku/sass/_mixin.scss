@@ -1,0 +1,15 @@
+/*********************************
+	MIXIN SET
+*********************************/
+@use "global/variables" as v;
+
+
+@mixin txt-direction {
+	-ms-writing-mode: tb-rl;
+	writing-mode: vertical-rl;
+}
+
+@mixin txt-direction-none {
+	-ms-writing-mode: initial;
+	writing-mode: initial;
+}

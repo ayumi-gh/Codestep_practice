@@ -346,6 +346,10 @@ h2 + p::after {
     padding: 0;
   }
 
+  .header-logo {
+    margin-bottom: 0;
+  }
+
   .header-btn {
     background: #000;
     color: #fff;
@@ -373,12 +377,98 @@ h2 + p::after {
   .about-img {
     width: 54.3vw;
   }
+  .about-img img {
+    height: 400px;
+  }
 
   .about-inner {
     margin-top: 150px;
   }
 
   /*---------- BUSINESS SET ----------*/
+  .business-list {
+    flex-direction: row;
+    gap: 64px;
+    justify-content: center;
+  }
+  .business-list img {
+    width: 368px;
+  }
+
+  .business-list-01 {
+    margin-top: 100px;
+  }
+
+  /*---------- COMPANY SET ----------*/
+  .company {
+    position: relative;
+    margin-bottom: 110px;
+  }
+
+  .company-inner {
+    padding: 60px 0 100px 62px;
+    margin-bottom: 0;
+    width: 567px;
+  }
+
+  .company-info {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .company-info div {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .company-info div dt {
+    flex-basis: 15%;
+    margin-top: 0;
+  }
+  .company-info div dd {
+    flex-basis: 75%;
+    margin-bottom: 0;
+    padding-left: 0;
+  }
+  .company-info div dd + dd {
+    margin-left: 15%;
+  }
+
+  .company-img {
+    position: absolute;
+    top: 75px;
+    right: 0px;
+    width: min(45vw, 547px);
+    z-index: 10;
+  }
+
+  /*---------- FOOTER SET ----------*/
+  .footer-inner {
+    align-items: center;
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    grid-template-rows: repeat(2, auto);
+    grid-auto-columns: 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas: "box1 box2" "box3 box3";
+    justify-content: space-between;
+  }
+
+  .footer-logo {
+    grid-area: box1;
+  }
+
+  .footer-info {
+    grid-area: box2;
+  }
+
+  .copyright {
+    grid-area: box3;
+  }
+
+  .footer-info {
+    margin-bottom: 0;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -1,0 +1,55 @@
+/*********************************
+	RESPONSIVE SET
+*********************************/
+@use "global/variables" as v;
+@use "function" as f;
+@use "mixin" as m;
+
+/*--------------------------------
+	MIN 768px
+--------------------------------*/
+@media screen and (min-width: 768px) {
+
+	/*---------- INFO SET ----------*/
+	.info-list {
+	
+		li {
+			&:nth-of-type(4),
+			&:nth-of-type(5) {
+				display: block;
+			}
+			
+		}
+	}
+
+	/*---------- PRODUCT SET ----------*/
+	.product-inner {
+		margin-right: 45px;
+		margin-bottom: 80px;
+	}
+
+	.product-item01 {
+		h2 {
+			&::before {
+				bottom: -10em;
+				content: "Create New Values";
+				font-size: 1.4rem;
+				left: 9px;
+				position: absolute;
+			}
+		}
+	}
+
+	.product-item02 {
+		h2 {
+			&::before {
+				bottom: -12em;
+				content: "Science & Technology";
+				font-size: 1.4rem;
+				left: 9px;
+				position: absolute;
+			}
+		}
+	}
+
+}
