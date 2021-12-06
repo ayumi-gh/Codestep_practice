@@ -159,7 +159,7 @@ h2 {
   -ms-writing-mode: tb-rl;
   writing-mode: vertical-rl;
   align-content: space-between;
-  background: url(/img/mainvisual-sp.jpg) no-repeat;
+  background: url(/img/mainvisual-pc.jpg) no-repeat;
   background-size: cover;
   background-position: center;
   color: #ffff;
@@ -206,6 +206,7 @@ h2 {
 .info-inner {
   -ms-writing-mode: tb-rl;
   writing-mode: vertical-rl;
+  margin-left: auto;
   margin-bottom: 80px;
 }
 .info-inner h2 {

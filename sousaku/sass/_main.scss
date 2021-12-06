@@ -14,7 +14,7 @@
 	@include m.txt-direction;
 
 	align-content: space-between;
-	background: url(/img/mainvisual-sp.jpg) no-repeat;
+	background: url(/img/mainvisual-pc.jpg) no-repeat;
 	background-size: cover;
 	background-position: center;
 	color: #ffff;
@@ -67,7 +67,7 @@
 .info-inner {
 	@include m.txt-direction;
 
-	// margin-right: 45px;
+	margin-left: auto;
 	margin-bottom: 80px;
 
 	h2 {

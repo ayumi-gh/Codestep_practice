@@ -1,0 +1,177 @@
+/*********************************
+	BASE SET
+*********************************/
+@use "global/variables" as v;
+@use "function" as f;
+@use "mixin" as m;
+
+html {
+	font-size: 62.5%;
+}
+
+body {
+	font-size: 1.6rem;
+	font-family: "游ゴシック", "Yu Gothic";
+}
+
+a {
+	color: inherit;
+	display: block;
+	text-decoration: none;
+}
+
+img {
+	height: auto;
+}
+
+ul,ol {
+	margin: 0;
+	padding: 0;
+}
+
+button{
+	background-color: transparent;
+	border: none;
+	cursor: pointer;
+	outline: none;
+	padding: 0;
+	appearance: none;
+}
+
+/*------ wrapper -------*/
+.wrapper {
+	margin: auto;
+	width: min(92%, 860px);
+}
+
+/*------ inline-block -------*/
+//横幅に収まりきらなくなったら改行
+.ib {
+	display: inline-block;
+}
+
+/*------ hX -------*/
+
+h2 {
+	font-size: 2.8rem;
+	font-weight: bold;
+	margin-bottom: 60px;
+	position: relative;
+	text-align: center;
+
+	&::after {
+		background: #000;
+		bottom: -20px;
+		display: inline-block;
+		content: "";
+		height: 3px;
+		left: 0;
+		right: 0;
+		margin: auto;
+		position: absolute;
+		width: 80px;    
+	}
+}
+
+h3 {
+	font-size: 2.4rem;
+	font-weight: 600;
+	line-height: 3.84rem;
+}
+
+/*------ button -------*/
+
+.btn {
+	display: block;
+
+	> a {
+		display: block;
+	}
+
+	&:hover {
+		opacity: 0.8;
+	}
+
+}
+
+/*------ ふきだし -------*/
+.arrow-box{
+    position: relative;
+    width: min(100%, 514px);
+    height: auto;
+    background: #E9F1FB;
+    padding: 20px;
+    color: #000;
+    border-radius:10px;
+    -webkit-border-radius:10px;
+    -moz-border-radius:10px;
+}
+
+.arrow-box:after{
+    border: solid transparent;
+    content:'';
+    height:0;
+    width:0;
+    pointer-events:none;
+    position:absolute;
+    border-color: rgba(233, 241, 251, 0);
+    border-top-width:10px;
+    border-bottom-width:10px;
+    border-left-width:12px;
+    border-right-width:12px;
+    margin-left: -12px;
+    border-top-color:#E9F1FB;
+    top:100%;
+    left:50%;
+}
+
+/*------ やじるし -------*/
+.arrow01 {
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    border-top: solid 3px #fff;
+    border-right: solid 3px #fff;
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+	margin-left: 1rem;
+}
+
+/*------ inview-js -------*/
+.js-fadeUp {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity .8s, transform .8s;
+
+	&.is-inview {
+		opacity: 1;
+		transform: translateY(0);
+		transition-delay: .5s;
+	}
+}
+
+.js-fadeLeft {
+    opacity: 0;
+    transform: translateX(-100%);
+    transition: opacity .8s, transform .8s;
+
+	&.is-inview {
+		opacity: 1;
+		transform: translateX(0);
+		transition-delay: .5s;
+	}
+}
+
+.js-fadeRight {
+    opacity: 0;
+    transform: translateX(100%);
+    transition: opacity .8s, transform .8s;
+
+	&.is-inview {
+		opacity: 1;
+		transform: translateX(0);
+		transition-delay: .5s;
+	}
+}
+
+

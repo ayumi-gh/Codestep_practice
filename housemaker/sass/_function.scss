@@ -1,0 +1,14 @@
+/*********************************
+	FUNCTION SET
+*********************************/
+@use "global/variables" as v;
+
+@function clamp_vw($num){
+    $minWidth: 768;     //最小幅
+    $maxWidth: 1366;    //最大幅
+    $val_min: $num * .1rem;
+    $val_vw: round($num / $minWidth * 100 * 1000) / 1000;
+    $val_max: round($maxWidth * ($val_vw / 100)) * .1rem;
+
+    @return clamp(#{$val_min}, #{$val_vw * 1vw}, #{$val_max});
+}

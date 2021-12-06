@@ -1,0 +1,411 @@
+/*********************************
+	MAIN SET
+*********************************/
+@use "global/variables" as v;
+@use "function" as f;
+@use "mixin" as m;
+
+/*--------------------------------
+	HEADER SET
+--------------------------------*/
+
+.header{
+	align-items: center;
+	background: #fff;
+	display: flex;
+	justify-content: space-between;
+	height: 100;
+	padding-left: 25px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+/*---------- ハンバーガーボタン ----------*/
+.openbtn{
+	position: relative;
+	background: v.$color-base-main;
+	cursor: pointer;
+    width: 75px;
+    height: 75px;
+}
+
+/*ボタン内側*/
+.openbtn span{
+    display: inline-block;
+    transition: all .4s;/*アニメーションの設定*/
+    position: absolute;
+    left: 20px;
+    height: 3px;
+    border-radius: 2px;
+	background: #fff;
+	width: 45%;
+}
+
+.openbtn span:nth-of-type(1) {
+	top:25px;	
+}
+
+.openbtn span:nth-of-type(2) {
+	top:35px;
+}
+
+.openbtn span:nth-of-type(3) {
+	top:45px;
+}
+
+.openbtn.active span:nth-of-type(1) {
+    top: 30px;
+    left: 18px;
+    transform: translateY(6px) rotate(-45deg);
+    width: 50%;
+}
+
+.openbtn.active span:nth-of-type(2) {
+	opacity: 0;
+}
+
+.openbtn.active span:nth-of-type(3){
+	top: 42px;
+	left: 20px;
+	transform: translateY(-6px) rotate(45deg);
+	width: 50%;
+}
+
+.open .header-nav {
+	transform: translate(-100%, 0);
+}
+
+.header-nav {
+	align-content: start;
+	background: v.$color-base-main;
+	color: #fff;
+	display: grid;
+	font-weight: bold;
+	gap: 40px;
+	justify-items: center;
+	inset: 0 -100% 0 100%;
+	position: fixed;
+	transition: transform .3s;
+	text-align: center;
+	z-index: 100;
+
+	.nav-header {
+		align-items: center;
+		display: flex;
+		height: 75px;
+		justify-content: space-between;
+		padding-left: 25px;
+		width: 100%;
+	}
+
+	.header-logo {
+		justify-self: left;
+	}
+
+	ul {
+		display: flex;
+		flex-direction: column;
+		gap: 20px;
+	}
+
+	.header-btn {
+		width: 250px;
+		border: 1px solid #fff;
+		padding: 15px 0;
+		position: relative;
+
+		&::after {
+			border-right: 1px solid #fff;
+			border-bottom: 1px solid #fff;
+			content: "　　";
+			width: 250px;
+			padding: 15px 0;
+			position: absolute;
+			right: -6px;
+			bottom: -8px;
+		}
+	}
+}
+
+/*--------------------------------
+	HERO SET
+--------------------------------*/
+
+.hero-content {
+	padding: 0 4%;
+}
+
+.slider {
+	height: 300px;
+	margin-bottom: 10px;
+
+	img {
+		height: 100%;
+		object-fit: cover;
+		object-position: center;
+	}
+
+	li::after {
+		content: "";
+		position: absolute;
+		inset: 0;
+		box-shadow: inset 0px 0px 20px 20px #fff;
+	}
+}
+
+.hero-content-title {
+	color: #333333;
+	font-size: 2.8rem;
+	font-weight: bold;
+	line-height: 4.7rem;
+	margin-bottom: 10px;
+	text-shadow: 2px 2px 5px #fff;
+}
+
+.hero-content-btn {
+	background: #FF0033;
+	border-radius: 10px;
+	box-shadow: 0 8px 0 0 #7A051C;
+	color: #fff;
+	font-size: 2.4rem;
+	padding: 15px 0;
+	position: relative;
+	text-align: center;
+	margin: 0 auto;
+	width: 100%;
+}
+
+/*==================================================
+スライダーのためのcss
+===================================*/
+.slider {
+	position:relative;
+	z-index: 1;
+	/*↑z-indexの値をh1のz-indexの値よりも小さくして背景に回す*/
+	height: 300px;/*スライダー全体の縦幅を画面の高さいっぱい（100vh）にする*/
+}
+
+.slider-item01 {	  
+	background:url(/img/mainvisual1.jpg);
+}
+
+.slider-item02 {
+	background:url(/img/mainvisual2.jpg);
+}
+
+.slider-item03 {
+	background:url(/img/mainvisual3.jpg);
+}
+
+.slider-item {
+	width: 100%;/*各スライダー全体の横幅を画面の高さいっぱい（100%）にする*/
+	height:300px;
+	background-repeat: no-repeat;/*背景画像をリピートしない*/
+	background-position: center;/*背景画像の位置を中央に*/
+	background-size: cover;/*背景画像が.slider-item全体を覆い表示*/
+}
+
+/*--------------------------------
+	REASON SET
+--------------------------------*/
+
+.reason {
+	padding-top: 80px;
+}
+
+.reason-list {
+	background-color: v.$color-base-main;
+	display: grid;
+	gap: 40px;
+	padding: 40px 0;
+
+	li[class^="reason-list-item"] {
+		align-items: center;
+		background: #fff;
+		border-radius: 0 20px 20px 0;
+		display: grid;
+		grid-template-columns: repeat(2, auto);
+		grid-template-rows: repeat(2, auto);
+		gap: 0px 30px;
+		grid-template-areas:
+			"box1 box2"
+			"box1 box3";
+		padding: f.clamp_vw(18) f.clamp_vw(22);
+		width: min(90%, 100vh);
+
+		&:nth-child(even) {
+			border-radius: 20px 0 0 20px;
+			justify-self: end;
+		}
+
+		img {
+			grid-area: box1;
+		}
+
+		h3 {
+			grid-area: box2;
+			color: v.$color-base-main;
+		}
+
+		p {
+			grid-area: box3; 
+			font-size: 1.8rem;
+		}
+	}
+}
+
+
+/*--------------------------------
+	REVIEW SET
+--------------------------------*/
+
+.review {
+	padding: 80px 0;
+}
+
+.review-list {
+	display: flex;
+	flex-direction: column;
+	gap: 80px;
+	text-align: center;
+	margin: 0 auto;
+
+	li {
+		figure {
+			display: grid;
+			justify-items: center;
+
+			> p {
+				margin-bottom: 30px;
+				text-align: left;
+			}
+
+			img {
+				background: #ccc;
+				clip-path: circle(50%);
+				display: inline-block;
+				height: 120px;
+				margin-bottom: 10px;
+				width: 120px;
+			}
+
+			figcaption {
+				font-size: 1.2rem;
+			}
+		}
+	}
+}
+
+/*--------------------------------
+	OUTLINE SET
+--------------------------------*/
+
+.outline {
+	animation: fall 10s infinite linear;
+	background: url(/img/bg.gif) repeat;
+	background-size: contain;
+	padding: 60px 0;
+	text-align: center;
+
+	@keyframes fall {
+		0% {background-position: 0 0;}
+		100% {background-position: -700px 700px;}
+	}
+}
+
+.outline-block {
+	display: grid;
+	gap: 32px;
+
+	li {
+		background: #fff;
+		border-radius: 20px;
+		padding: 4vw;
+		text-align: center;
+
+		h3 {
+			margin-bottom: 1.5rem;
+		}
+
+		> .en {
+			display: block;
+			font-weight: bold;
+			margin-bottom: 3rem;
+		}
+
+		p {
+			text-align: left;
+		}
+	}
+}
+
+
+/*--------------------------------
+	PROMOTION SET
+--------------------------------*/
+
+.promotion-inner {
+	padding: 80px 0;
+	text-align: center;
+
+	p {
+		font-weight: lighter;
+		margin-bottom: 40px;
+	}
+
+	.promotion-btn {
+		background: v.$color-base-main;
+		border-radius: 50px;
+		color: #fff;
+		font-size: 2.4rem;
+		font-weight: bold;
+		letter-spacing: .4rem;
+		padding: 15px 0;
+		width: 100%;
+	}
+}
+
+/*--------------------------------
+	FOOTER SET
+--------------------------------*/
+
+.footer {
+	background: #E8E8E8;
+}
+
+.footer-inner {
+	padding-top: 60px;
+}
+
+.footer-nav-main {
+	display: grid;
+	gap: 5vw 3vw;
+	grid-template-columns: repeat(2, 1fr);
+	margin-bottom: 40px;
+
+	> li {
+		> a {
+			font-size: 1.5rem;
+			font-weight: bold;
+			margin-bottom: 10px;
+		}
+	}
+}
+
+.footer-nav-sub {
+	> li {
+		margin-left: 1em;
+		
+		> a {
+			font-size: 1.2rem;
+			line-height: 2.2rem;
+		}
+	}
+}
+
+.copyright {
+	font-size: 1rem;
+	padding: 20px 0;
+	text-align: center;
+}

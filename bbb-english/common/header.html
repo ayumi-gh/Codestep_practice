@@ -1,0 +1,57 @@
+<h1 class="header-logo">
+    <a href="#">
+        <img src="/img/logo-r.svg" alt="" width="100" height="56">
+    </a>
+</h1>
+<div class="openbtn">
+    <span></span>
+    <span></span>
+    <span></span>
+</div>
+<nav class="header-nav">
+    <div class="nav-header">
+        <div class="header-logo">
+            <a href="#">
+                <img src="/img/logo-w.svg" alt="" width="100" height="56">
+            </a>
+        </div>
+        <div class="openbtn">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </div>
+    <ul role="list">
+        <li><a href="#reason">BBBが選ばれる理由</a></li>
+        <li><a href="#review">受講生の声</a></li>
+        <li><a href="#outline">スクールの概要</a></li>
+    </ul>
+    <a href="" class="header-btn btn">無料体験に申し込む</a>
+</nav>
+<script>
+    //ハンバーガーボタン
+    var flg =false;
+    var winPos;
+
+    $(".openbtn").click(function () {
+        // $(this).toggleClass('active');
+        $(".openbtn").toggleClass('active');
+        document.querySelector('html').classList.toggle('open');
+
+        if(flg == false) {
+            widPos = $(window).scrollTop();
+            $('body').addClass('fixed').css({'top': -widPos});
+            flg = true;
+        } else {
+            $('body').removeClass('fixed').css({'top': 0});
+            window.scrollTo(0, widPos);
+            flg = false;
+        }
+    });
+
+    $(".header ul a").click(function () {
+        $(".openbtn").toggleClass('active');
+        document.querySelector('html').classList.toggle('open');
+    });
+
+</script>

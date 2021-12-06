@@ -1,0 +1,35 @@
+<div class="header-inner">
+    <h1 class="header-logo">
+        <a href="#">
+            <img src="/img/logo.svg" alt="" width="180" height="54">
+        </a>
+    </h1>
+    <div class="openbtn">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+    <nav class="header-nav">
+        <ul class="header-nav-main" role="list">
+            <li><a href="">私たちについて</a></li>
+            <li><a href="">サービス</a></li>
+            <li><a href="">商品情報</a></li>
+            <li><a href="">展示会</a></li>
+            <li><a href="">暮らしの日記</a></li>
+            <li><a href="">会社概要</a></li>
+        </ul>
+        <ul class="header-nav-sns" role="list">
+            <li><a href="">Twitter</a></li>
+            <li><a href="">facebook</a></li>
+            <li><a href="">instagram</a></li>
+        </ul>
+    </nav>
+</div>
+<div id="mask"></div>
+<script>
+    //ハンバーガーメニュー
+    $(".openbtn").click(function () {
+        $(this).toggleClass('active');
+        document.querySelector('html').classList.toggle('open');
+    });
+</script>

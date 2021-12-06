@@ -1,0 +1,84 @@
+/*********************************
+	RESPONSIVE SET
+*********************************/
+@use "global/variables" as v;
+@use "function" as f;
+@use "mixin" as m;
+
+/*--------------------------------
+	MIN XXXpx
+--------------------------------*/
+@media screen and (min-width: 960px) {
+
+	body {
+		display: grid; 
+		grid-auto-columns: 1fr; 
+		grid-auto-rows: 1fr; 
+		grid-template-columns: 300px 1fr; 
+		grid-template-rows: auto auto; 
+		gap: 0px 0px; 
+		grid-template-areas: 
+			"header main"
+			"header footer"; 
+	}
+
+	header { grid-area: header; }
+	main { grid-area: main; }
+	footer { grid-area: footer; }
+
+	/*---------- HEADER SET ----------*/
+	.header {
+		height: 100vh;
+		padding: 30px 40px 0;
+	}
+
+	.header-inner {
+		flex-direction: column;
+    	gap: 40px;
+		height: inherit;
+	}
+
+	.header-logo img {
+		width: 250px;
+	}
+
+	.openbtn {
+		display: none;
+	}
+
+	.header-nav {
+		display: flex;
+		gap: 10vw;
+		flex-direction: column;
+		font-size: 1.4rem;
+		height: 100%;
+		padding: 0;
+		position: initial;
+		width: 100%;
+		z-index: 100;
+	}
+
+	.header-nav-main {
+		gap: 20px;
+	}
+	
+	.header-nav-sns {
+		gap: 20px;
+	}
+
+	/*---------- VIDEO SET ----------*/
+	.video {
+		height: 100vh;
+	}
+
+
+	.video .bg-video {
+		position: fixed;
+		inset: 0;
+		margin: 0;
+		width: 100%;
+		height: inherit;
+		object-fit: cover;
+	}
+
+}

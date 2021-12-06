@@ -1,0 +1,113 @@
+/*********************************
+	RESPONSIVE SET
+*********************************/
+@use "global/variables" as v;
+@use "function" as f;
+@use "mixin" as m;
+
+/*--------------------------------
+	MIN 900px
+--------------------------------*/
+@media screen and (min-width: 900px) {
+
+	/*---------- HERO SET ----------*/
+	.hero {
+		align-items: center;
+		display: flex;
+		flex-direction: row-reverse;
+		height: 720px;
+		width: 100%;
+	}
+
+	.slider {
+		height: inherit;
+		width: 70%;
+
+		.slider-item {
+			height: 720px;
+		}
+	}
+
+	.hero-content {
+		width: max(40%, 480px);
+		z-index: 10;
+		margin-right: -250px;
+	}
+
+	.hero-content-title {
+		font-size: 4.4rem;
+		line-height: 7.4rem;
+	}
+
+	/*---------- REVIEW SET ----------*/
+	.review-list {
+		li {
+			
+			figure {
+				grid-template-columns: repeat(2, auto);
+				grid-template-rows: repeat(2, auto);
+				gap: 0px 30px;
+				grid-template-areas:
+					"box1 box3"
+					"box2 box3";
+	
+				img { grid-area: box1; }
+				figcaption { grid-area: box2; }
+				p { grid-area: box3; }
+
+				&:nth-child(even) {
+					grid-template-areas:
+					"box3 box1"
+					"box3 box2";
+				}
+
+				.arrow-box:after{
+					border-color: rgba(233, 241, 251, 0);
+					margin-top: -10px;
+					border-right-color: #E9F1FB;
+					top: revert;
+					left: revert;
+					right: 100%;
+					bottom: 15%;
+				}
+
+				p {
+					justify-self: start;
+				}
+			}
+
+			&:nth-child(even) {
+				figure {
+					grid-template-areas:
+					"box3 box1"
+					"box3 box2";
+
+					.arrow-box:after{
+						border-color: rgba(233, 241, 251, 0);
+						border-left-color: #E9F1FB;
+						left: 102.4%;
+					}
+
+					p {
+						justify-self: end;
+					}
+				}
+
+			}
+		}
+	}
+	
+
+
+	/*---------- OUTLINE SET ----------*/
+	.outline-block {
+		grid-template-columns: repeat(2, 1fr);
+	}
+
+	/*---------- FOOTER SET ----------*/
+	.footer-nav-main {
+		grid-template-columns: repeat(4, 1fr);
+	}
+
+
+}
